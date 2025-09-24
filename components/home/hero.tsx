@@ -10,18 +10,22 @@ export function Hero() {
 
   return (
     <section
-      className="relative overflow-hidden bg-slate-900/90 text-white py-30 flex flex-col justify-center min-h-screen items-center text-center"
+      className="relative overflow-hidden bg-slate-900/90 text-white flex flex-col justify-center min-h-screen items-center text-center"
       aria-labelledby="hero-heading"
-      style={{
-        backgroundImage: `url('/images/hero.jpg')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
-      }}
     >
-      <div className="absolute inset-0 bg-slate-900/95"></div>
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        src="/real2.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
 
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-slate-900/90"></div>
+
+      {/* Content */}
       <div className="relative z-10 max-w-5xl flex flex-col items-center justify-center text-center mx-auto px-4 py-24">
         <hgroup>
           <motion.h1
@@ -62,7 +66,9 @@ export function Hero() {
           >
             Get Started
           </Link>
+
           <button
+          //  onClick={() => setShowVideo(true)}
             className="border-2 border-gray-400 text-gray-300 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-700 hover:text-white transition-all duration-200 flex items-center justify-center gap-2 w-full sm:w-fit text-center"
           >
             <Play className="h-5 w-5" />
@@ -71,6 +77,7 @@ export function Hero() {
         </motion.div>
       </div>
 
+      {/* Demo modal */}
       <AnimatePresence>
         {showVideo && (
           <motion.div
