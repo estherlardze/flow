@@ -13,7 +13,7 @@ export function Navbar() {
       <div className="container mx-auto flex h-16 items-center justify-between px-6 relative">
         <div className="flex items-center space-x-2">
           <Building2 className="h-8 w-8 text-blue-400" />
-          <span className="text-2xl font-bold">LeadCRM</span>
+          <span className="text-2xl font-bold">LeadFlow</span>
         </div>
 
         <nav className="hidden md:flex items-center space-x-8">
@@ -55,7 +55,7 @@ export function Navbar() {
             ))}
             <Link
               href="#"
-              className="bg-blue-500 text-white border-blue-500 hover:bg-blue-600 hover:border-blue-600"
+              className="bg-blue-500 text-white border-blue-500 hover:bg-blue-600 hover:border-blue-600 py-2 rounded-2xl px-4 text-center"
               onClick={() => setIsOpen(false)}
             >
               Login 

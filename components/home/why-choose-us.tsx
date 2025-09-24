@@ -45,7 +45,7 @@ export function Benefits() {
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          Why <span className="text-blue-500">Lead Pro</span> is The Right
+          Why <span className="text-blue-500">LeadFlow</span> is The Right
           Choice for You
         </motion.h2>
 

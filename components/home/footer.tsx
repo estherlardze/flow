@@ -31,7 +31,7 @@ export function Footer() {
           >
             <div className="flex items-center space-x-2 mb-4">
               <Building2 className="h-8 w-8 text-blue-400" />
-              <span className="text-xl font-bold">RealtyFlow</span>
+              <span className="text-xl font-bold">LeadFlow</span>
             </div>
             <p className="text-gray-400 mb-4">
               The complete CRM solution for real estate professionals.
@@ -129,14 +129,14 @@ export function Footer() {
 
         {/* Bottom row */}
         <motion.div
-          className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+          className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-left md:items-center"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6 }}
           viewport={{ once: true }}
         >
           <p className="text-gray-400">
-            © {new Date().getFullYear()} RealtyFlow. All rights reserved.
+            © {new Date().getFullYear()} LeadFlow. All rights reserved.
           </p>
           <ul className="flex space-x-6 mt-4 md:mt-0 text-gray-400">
             {legalLinks.map((link, i) => (

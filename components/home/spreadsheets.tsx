@@ -55,19 +55,7 @@ export const spreadsheet: Card[] = [
     description:
       "Manually managing lead stages or deal progress can quickly become confusing...",
   },
-  {
-    id: 3,
-    type: "avatar",
-    title: "Missed Client Messages",
-    avatars: [
-      "https://randomuser.me/api/portraits/men/75.jpg",
-      "https://randomuser.me/api/portraits/women/65.jpg",
-      "https://randomuser.me/api/portraits/men/33.jpg",
-    ],
-    descriptionTitle: "Calls with Teammates",
-    description:
-      "Inconsistent communication channels often lead to unread messages or delay...",
-  },
+ 
   {
     id: 4,
     type: "value",
@@ -103,7 +91,7 @@ const cardVariants = {
 export function LeadLossSection(): JSX.Element {
   return (
     <section
-      className="bg-white pt-10 pb-20 px-4 flex flex-col items-center max-w-7xl mx-auto"
+      className="bg-white pt-10 pb-20 px-4 flex flex-col items-center justify-center max-w-7xl mx-auto"
       aria-labelledby="lead-loss-heading"
     >
       <header className="max-w-4xl text-center mb-12">

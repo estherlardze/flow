@@ -37,13 +37,7 @@ export const cardData = [
     icon: BarChart3,
     color: "#06B6D4",
   },
-  {
-    title: "Communication Hub",
-    subtitle:
-      "Centralize all client communications with built-in email, SMS, and call logging capabilities.",
-    icon: MessageSquare,
-    color: "#10B981",
-  },
+ 
   {
     title: "Automation Tools",
     subtitle:
