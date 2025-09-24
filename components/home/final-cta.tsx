@@ -61,7 +61,7 @@ export function FinalCTA() {
           transition={{ duration: 0.7, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <Link href="/sign-up" className="bg-blue-500 hover:bg-blue-600 text-white px-12 py-3 mb-48 rounded-3xl font-bold text-lg shadow-lg transition-all duration-300">
+          <Link href="#" className="bg-blue-500 hover:bg-blue-600 text-white px-12 py-3 mb-48 rounded-3xl font-bold text-lg shadow-lg transition-all duration-300">
             Get Started for Free
           </Link>
           <p className="text-gray-600 mt-4">

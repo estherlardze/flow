@@ -10,7 +10,7 @@ export function Hero() {
 
   return (
     <section
-      className="relative overflow-hidden bg-slate-900 text-white py-30 flex flex-col justify-center min-h-screen items-center text-center"
+      className="relative overflow-hidden bg-slate-900/90 text-white py-30 flex flex-col justify-center min-h-screen items-center text-center"
       aria-labelledby="hero-heading"
       style={{
         backgroundImage: `url('/images/hero.jpg')`,
