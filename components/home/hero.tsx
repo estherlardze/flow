@@ -15,7 +15,7 @@ export function Hero() {
     >
       <video
         className="absolute inset-0 w-full h-full object-cover"
-        src="/real2.mp4"
+        src="https://res.cloudinary.com/dq9fydzhb/video/upload/v1758753771/real2_lxuwyw.mp4"
         autoPlay
         loop
         muted
@@ -68,7 +68,7 @@ export function Hero() {
           </Link>
 
           <button
-          //  onClick={() => setShowVideo(true)}
+            //  onClick={() => setShowVideo(true)}
             className="border-2 border-gray-400 text-gray-300 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-700 hover:text-white transition-all duration-200 flex items-center justify-center gap-2 w-full sm:w-fit text-center"
           >
             <Play className="h-5 w-5" />
