@@ -1,0 +1,181 @@
+:root {
+  --primary-50: #eff6ff;
+  --primary-100: #dbeafe;
+  --primary-200: #bfdbfe;
+  --primary-300: #93c5fd;
+  --primary-400: #60a5fa;
+  --primary-500: #3b82f6;  /* Main primary blue */
+  --primary-600: #2563eb;  /* Darker primary for hover states */
+  --primary-700: #1d4ed8;
+  --primary-800: #1e40af;
+  --primary-900: #1e3a8a;
+  --primary-950: #172554;
+
+  --primary: var(--primary-500);
+  --primary-hover: var(--primary-600);
+  --primary-light: var(--primary-100);
+  --primary-dark: var(--primary-700);
+
+  --neutral-50: #f9fafb;
+  --neutral-100: #f3f4f6;
+  --neutral-200: #e5e7eb;
+  --neutral-300: #d1d5db;
+  --neutral-400: #9ca3af;
+  --neutral-500: #6b7280;
+  --neutral-600: #4b5563;
+  --neutral-700: #374151;
+  --neutral-800: #1f2937;
+  --neutral-900: #111827;
+  --neutral-950: #030712;
+
+  --background: #ffffff;
+  --background-secondary: var(--neutral-50);
+  --background-tertiary: var(--neutral-100);
+  --background-overlay: rgba(0, 0, 0, 0.5);
+  
+  --card-background: #ffffff;
+  --card-background-hover: var(--neutral-50);
+  --sidebar-background: var(--neutral-50);  /* Light gray for better contrast */
+  --sidebar-border: var(--neutral-200);     /* Subtle border */
+  --header-background: #ffffff;
+
+  --text-primary: var(--neutral-900);
+  --text-secondary: var(--neutral-600);
+  --text-muted: var(--neutral-500);
+  --text-disabled: var(--neutral-400);
+  --text-inverse: #ffffff;
+  --text-on-primary: #ffffff;
+
+  --border: var(--neutral-200);
+  --border-light: var(--neutral-100);
+  --border-medium: var(--neutral-300);
+  --border-strong: var(--neutral-400);
+  --border-primary: var(--primary-500);
+
+  --success-50: #f0fdf4;
+  --success-100: #dcfce7;
+  --success-500: #22c55e;
+  --success-600: #16a34a;
+  --success: var(--success-500);
+  --success-light: var(--success-100);
+
+  --warning-50: #fffbeb;
+  --warning-100: #fef3c7;
+  --warning-500: #f59e0b;
+  --warning-600: #d97706;
+  --warning: var(--warning-500);
+  --warning-light: var(--warning-100);
+
+  --error-50: #fef2f2;
+  --error-100: #fee2e2;
+  --error-500: #ef4444;
+  --error-600: #dc2626;
+  --error: var(--error-500);
+  --error-light: var(--error-100);
+
+  --info-50: #eff6ff;
+  --info-100: #dbeafe;
+  --info-500: #3b82f6;
+  --info-600: #2563eb;
+  --info: var(--info-500);
+  --info-light: var(--info-100);
+
+  --button-primary-bg: var(--primary-500);
+  --button-primary-bg-hover: var(--primary-600);
+  --button-primary-text: #ffffff;
+  --button-secondary-bg: #ffffff;
+  --button-secondary-bg-hover: var(--neutral-50);
+  --button-secondary-text: var(--neutral-700);
+  --button-secondary-border: var(--border);
+
+  /* Input colors */
+  --input-bg: #ffffff;
+  --input-border: var(--border);
+  --input-border-focus: var(--primary-500);
+  --input-text: var(--text-primary);
+  --input-placeholder: var(--text-muted);
+
+  /* Table colors */
+  --table-header-bg: var(--neutral-50);
+  --table-row-hover: var(--neutral-50);
+  --table-border: var(--border);
+
+  /* Modal colors */
+  --modal-bg: #ffffff;
+  --modal-overlay: rgba(0, 0, 0, 0.5);
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  --status-new: var(--primary-500);
+  --status-contacted: var(--warning-500);
+  --status-qualified: var(--info-500);
+  --status-proposal: #8b5cf6; /* Purple */
+  --status-negotiation: #f97316; /* Orange */
+  --status-closed-won: var(--success-500);
+  --status-closed-lost: var(--error-500);
+
+  /* Status background colors (light versions) */
+  --status-new-bg: var(--primary-50);
+  --status-contacted-bg: var(--warning-50);
+  --status-qualified-bg: var(--info-50);
+  --status-proposal-bg: #f5f3ff;
+  --status-negotiation-bg: #fff7ed;
+  --status-closed-won-bg: var(--success-50);
+  --status-closed-lost-bg: var(--error-50);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--neutral-900);
+    --background-secondary: var(--neutral-800);
+    --background-tertiary: var(--neutral-700);
+    
+    --card-background: var(--neutral-800);
+    --card-background-hover: var(--neutral-700);
+    --sidebar-background: var(--neutral-800);  /* Lighter than main background */
+    --sidebar-border: var(--neutral-700);      /* Visible border in dark mode */
+    --header-background: var(--neutral-800);
+    
+    --text-primary: var(--neutral-100);
+    --text-secondary: var(--neutral-300);
+    --text-muted: var(--neutral-400);
+    --text-disabled: var(--neutral-500);
+    
+    --border: var(--neutral-700);
+    --border-light: var(--neutral-800);
+    --border-medium: var(--neutral-600);
+    --border-strong: var(--neutral-500);
+    
+    --input-bg: var(--neutral-800);
+    --input-border: var(--neutral-700);
+    
+    --table-header-bg: var(--neutral-800);
+    --table-row-hover: var(--neutral-800);
+    
+    --modal-bg: var(--neutral-800);
+  }
+}
+
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-muted { color: var(--text-muted); }
+.text-on-primary { color: var(--text-on-primary); }
+
+.bg-primary { background-color: var(--primary); }
+.bg-background { background-color: var(--background); }
+.bg-card { background-color: var(--card-background); }
+
+.border-primary { border-color: var(--border-primary); }
+.border-default { border-color: var(--border); }
+
+.status-new { color: var(--status-new); background-color: var(--status-new-bg); }
+.status-contacted { color: var(--status-contacted); background-color: var(--status-contacted-bg); }
+.status-qualified { color: var(--status-qualified); background-color: var(--status-qualified-bg); }
+.status-proposal { color: var(--status-proposal); background-color: var(--status-proposal-bg); }
+.status-negotiation { color: var(--status-negotiation); background-color: var(--status-negotiation-bg); }
+.status-closed-won { color: var(--status-closed-won); background-color: var(--status-closed-won-bg); }
+.status-closed-lost { color: var(--status-closed-lost); background-color: var(--status-closed-lost-bg); }

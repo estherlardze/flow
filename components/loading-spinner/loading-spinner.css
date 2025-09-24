@@ -1,0 +1,231 @@
+:root {
+  --loading-spinner-size: 32px;
+  --loading-spinner-stroke: 3px;
+  --loading-spinner-accent: #4E53EE;
+  --loading-spinner-track: rgba(0, 0, 0, 0.08);
+  --loading-spinner-shadow: rgba(0, 0, 0, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --loading-spinner-track: rgba(255, 255, 255, 0.1);
+    --loading-spinner-shadow: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.loading-spinner {
+  --size: var(--loading-spinner-size);
+  --stroke: var(--loading-spinner-stroke);
+  --accent: var(--loading-spinner-accent);
+  
+  width: var(--size);
+  height: var(--size);
+  position: relative;
+  display: inline-block;
+}
+
+.loading-spinner__svg {
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  filter: drop-shadow(0 2px 8px var(--loading-spinner-shadow));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.loading-spinner__track {
+  fill: none;
+  stroke: var(--loading-spinner-track);
+  stroke-width: var(--stroke);
+  stroke-linecap: round;
+}
+
+.loading-spinner__arc {
+  fill: none;
+  stroke: url(#gradient);
+  stroke-width: var(--stroke);
+  stroke-linecap: round;
+  stroke-dasharray: 89 200;
+  stroke-dashoffset: -35;
+  transform-origin: center;
+}
+
+.loading-spinner__center {
+  fill: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .loading-spinner__center {
+    fill: rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Animations */
+@keyframes loading-spinner-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-spinner-dash {
+  0% {
+    stroke-dasharray: 1 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89 200;
+    stroke-dashoffset: -124;
+  }
+}
+
+@keyframes loading-spinner-appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes loading-spinner-disappear {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+@keyframes loading-spinner-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Default animations */
+.loading-spinner--animate .loading-spinner__svg {
+  animation: loading-spinner-rotate 1.1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.loading-spinner--animate .loading-spinner__arc {
+  animation: loading-spinner-dash 1.1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.loading-spinner--appear {
+  animation: loading-spinner-appear 160ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.loading-spinner--disappear {
+  animation: loading-spinner-disappear 160ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Reduced motion fallback */
+@media (prefers-reduced-motion: reduce) {
+  .loading-spinner--animate .loading-spinner__svg {
+    animation: none;
+  }
+  
+  .loading-spinner--animate .loading-spinner__arc {
+    animation: loading-spinner-pulse 2s ease-in-out infinite;
+    stroke-dasharray: 89 200;
+    stroke-dashoffset: -35;
+  }
+  
+  .loading-spinner--appear,
+  .loading-spinner--disappear {
+    animation-duration: 0ms;
+  }
+}
+
+/* Size variants */
+.loading-spinner--xs {
+  --size: 16px;
+  --stroke: 2px;
+}
+
+.loading-spinner--sm {
+  --size: 20px;
+  --stroke: 2px;
+}
+
+.loading-spinner--md {
+  --size: 24px;
+  --stroke: 2.5px;
+}
+
+.loading-spinner--lg {
+  --size: 32px;
+  --stroke: 3px;
+}
+
+.loading-spinner--xl {
+  --size: 40px;
+  --stroke: 3.5px;
+}
+
+.loading-spinner--2xl {
+  --size: 48px;
+  --stroke: 4px;
+}
+
+/* Color variants */
+.loading-spinner--blue {
+  --accent: #007AFF;
+}
+
+.loading-spinner--green {
+  --accent: #34C759;
+}
+
+.loading-spinner--orange {
+  --accent: #FF9500;
+}
+
+.loading-spinner--red {
+  --accent: #FF3B30;
+}
+
+.loading-spinner--purple {
+  --accent: #AF52DE;
+}
+
+.loading-spinner--pink {
+  --accent: #FF2D92;
+}
+
+.loading-spinner--indigo {
+  --accent: #5856D6;
+}
+
+.loading-spinner--teal {
+  --accent: #5AC8FA;
+}
+
+/* Accessibility */
+.loading-spinner__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

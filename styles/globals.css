@@ -1,0 +1,239 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* phone-input.css */
+.PhoneInputInput {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.PhoneInput {
+  border: 1px solid #d1d5db; 
+  border-radius: 1rem; 
+  padding: 0.75rem 1rem; 
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.PhoneInput:focus-within {
+  box-shadow: 0 0 0 2px rgba(13, 148, 136, 0.2);
+}
+
+
+@custom-variant dark (&:is(.dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+  --font-sans: "Inter", sans-serif;
+  
+
+  --color-primary: #3b82f6;
+  --color-primary-foreground: #ffffff;
+  
+  --color-secondary: #f8fafc;
+  --color-secondary-foreground: #334155;
+
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
+
+  --color-border: #e2e8f0;
+  --color-input: #ffffff;
+  --color-ring: #3b82f6;
+
+  --color-card: #ffffff;
+  --color-card-foreground: #000000;
+
+  --color-sidebar: #f8fafc;
+  --color-sidebar-foreground: #334155;
+  --color-sidebar-primary: #3b82f6;
+  --color-sidebar-primary-foreground: #ffffff;
+  --color-sidebar-accent: #e2e8f0;
+  --color-sidebar-accent-foreground: #475569;
+  --color-sidebar-border: #cbd5e1;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --accent: #9EA3A3;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #f8fafc;
+  --secondary-foreground: #334155;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --border: #e2e8f0;
+  --input: #ffffff;
+  --ring: #3b82f6;
+  --highlight: #10b981;
+  --support-rose: #f43f5e;
+  --support-violet: #8b5cf6;
+  --primary-light: #60a5fa;
+  
+  --sidebar: #f8fafc;
+  --sidebar-foreground: #334155;
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e2e8f0;
+  --sidebar-accent-foreground: #475569;
+  --sidebar-border: #cbd5e1;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --card: #1e293b;
+  --card-foreground: #f8fafc;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #1e293b;
+  --secondary-foreground: #cbd5e1;
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+  --border: #334155;
+  --input: #1e293b;
+  --ring: #3b82f6;
+  --highlight: #10b981;
+  --support-rose: #f43f5e;
+  --support-violet: #8b5cf6;
+  --primary-light: #60a5fa;
+  
+  --sidebar: #1e293b;
+  --sidebar-foreground: #cbd5e1;
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #334155;
+  --sidebar-accent-foreground: #e2e8f0;
+  --sidebar-border: #475569;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: "Inter", sans-serif;
+  }
+}
+
+/* Clean Sidebar Styling */
+[data-sidebar] {
+  background-color: var(--sidebar) !important;
+  border-right: 1px solid var(--sidebar-border) !important;
+}
+
+[data-sidebar] [data-sidebar="header"] {
+  background-color: var(--sidebar) !important;
+  border-bottom: 1px solid var(--sidebar-border) !important;
+}
+
+[data-sidebar] [data-sidebar="content"] {
+  background-color: var(--sidebar) !important;
+}
+
+.sidebar-nav-item {
+  color: var(--sidebar-foreground) !important;
+  background-color: transparent !important;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-weight: 500;
+}
+
+.sidebar-nav-item:hover {
+  background-color: var(--sidebar-accent) !important;
+  color: var(--sidebar-accent-foreground) !important;
+}
+
+.sidebar-nav-item.active,
+.sidebar-nav-item[data-active="true"] {
+  background-color: var(--sidebar-primary) !important;
+  color: var(--sidebar-primary-foreground) !important;
+}
+
+[data-sidebar] button[data-sidebar="menu-button"] {
+  background-color: transparent !important;
+  color: var(--sidebar-foreground) !important;
+}
+
+[data-sidebar] button[data-sidebar="menu-button"]:hover {
+  background-color: var(--sidebar-accent) !important;
+  color: var(--sidebar-accent-foreground) !important;
+}
+
+.sidebar-section-header {
+  color: var(--muted-foreground);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 12px;
+  margin-top: 16px;
+}
+.hide-scrollbar {
+  overflow-y: scroll;           
+  scrollbar-width: none;       
+  -ms-overflow-style: none;     
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #93c5fd #f3f4f6;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Assign modal scrollbar */
+.assign-modal-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #f3f4f6;
+}
+
+.assign-modal-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.assign-modal-scroll::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 3px;
+}
+
+.assign-modal-scroll::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 3px;
+}
+
+.assign-modal-scroll::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}

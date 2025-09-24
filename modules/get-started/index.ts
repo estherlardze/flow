@@ -1,0 +1,1 @@
+export { default as GetStarted } from "./components/get-started";
