@@ -41,7 +41,7 @@ export const cardData = [
   {
     title: "Automation Tools",
     subtitle:
-      "Automate follow-ups, appointment scheduling, and task management to save time and increase efficiency.",
+      "Automate follow-ups, lead management, and reminders to save time and increase efficiency.",
     icon: Zap,
     color: "#F43F5E",
   },
